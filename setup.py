@@ -3,15 +3,15 @@ from setuptools import setup
 
 
 setup(
-    name='django-clever-selects',
-    version='0.8.2',
+    name='django-clever-selects-xadmin',
+    version='0.8.8.4',
     description='Chained select box widget for Django framework using AJAX requests.',
     long_description=open('README.rst').read(),
     author='Pragmatic Mates',
     author_email='info@pragmaticmates.com',
-    maintainer='Pragmatic Mates',
-    maintainer_email='info@pragmaticmates.com',
-    url='https://github.com/PragmaticMates/django-clever-selects',
+    maintainer='Croxlink',
+    maintainer_email='eddiep@croxlink.com',
+    url='https://github.com/CROXLINK/django-clever-selects',
     packages=[
         'clever_selects',
         'clever_selects.templatetags'

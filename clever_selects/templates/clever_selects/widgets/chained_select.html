@@ -3,16 +3,19 @@
     "use strict";
 
     document.addEventListener("DOMContentLoaded", function() {
-        var parentField = document.querySelector("#{{ js_parent_field_id }}");
-        parentField.classList.add("chained-parent-field");
+        var parentFields = document.querySelectorAll("input#{{ js_parent_field_id }}");
 
-        var chained_ids = parentField.getAttribute("chained_ids");
+        for (var i = 0; i < parentFields.length; i++) {
+            parentFields[i].classList.add("chained-parent-field");
 
-        if (chained_ids !== null && chained_ids !== "") {
-            parentField.setAttribute("chained_ids", chained_ids + ",{{ js_chained_id }}");
-        }
-        else {
-            parentField.setAttribute("chained_ids", "{{ js_chained_id }}");
+            var chained_ids = parentFields[i].getAttribute("chained_ids");
+
+            if (chained_ids !== null && chained_ids !== "") {
+                parentFields[i].setAttribute("chained_ids", chained_ids + ",{{ js_chained_id }}");
+            }
+            else {
+                parentFields[i].setAttribute("chained_ids", "{{ js_chained_id }}");
+            }
         }
     });
 </script>
